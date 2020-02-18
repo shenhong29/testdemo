@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Desktop iOS Android Suite" verbose="1">
+    <test name="DesktopChrome" preserve-order="true">
+        <groups>
+            <run>
+                <include name="desktop" />
+            </run>
+        </groups>
+        <classes>
+            <class name="io.test.proj.testcase.AnagramTestsDesktop">
+                <methods>
+                    <include name="getAnagramFromServerByDesktopChrome" />
+                    <include name="validateAnagramList" />
+                    <include name="finishUp" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="iOSSafari" preserve-order="true">
+        <groups>
+            <run>
+                <include name="ios" />
+            </run>
+        </groups>
+        <classes>
+            <class name="io.test.proj.testcase.AnagramTestsIOSSafari">
+                <methods>
+                    <include name="getAnagramFromServerByIOSSafari" />
+                    <include name="validateAnagramList" />
+                    <include name="finishUp" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="AndroidChrome" preserve-order="true">
+        <groups>
+            <run>
+                <include name="android" />
+            </run>
+        </groups>
+        <classes>
+            <class name="io.test.proj.testcase.AnagramTestsAndroidChrome">
+                <methods>
+                    <include name="getAnagramFromServerByAndroidChrome" />
+                    <include name="validateAnagramList" />
+                    <include name="finishUp" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
